@@ -1,17 +1,8 @@
 #!/usr/bin/env sh
 
-errln() {
-  echo "\033[31;1m[ERR ]\033[0m $@"
-}
-
-logln() {
-  echo "\033[32;1m[INFO]\033[0m $@"
-}
-
-die() {
-  echo "$@"
-  exit 1
-}
+errln() { echo "\033[31;1m[ERR ]\033[0m $@"; }
+logln() { echo "\033[32;1m[INFO]\033[0m $@"; }
+die() { echo "$@"; exit 1; }
 
 # highlight range of lines [n,m] read from stdin
 hlln() {
